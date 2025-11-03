@@ -1,0 +1,15 @@
+[Unit]
+Description=Poll Memmingen Airport Tour for free places
+Wants=memmingen-airport.timer
+
+[Service]
+Type=oneshot
+User=tryone
+WorkingDirectory=/opt/scripts/helper/misc
+ExecStart=/opt/scripts/helper/misc/memmingen-airport-tour.py --mail "placeholder1" "placeholder2"
+SyslogIdentifier=memmingen-airport
+
+[Install]
+WantedBy=multi-user.target
+Alias=memmingen-airport.service
+

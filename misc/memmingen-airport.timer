@@ -1,0 +1,10 @@
+[Unit]
+Description=Poll Memmingen Airport Tour for free places
+Requires=memmingen-airport.service
+
+[Timer]
+Unit=memmingen-airport.service
+OnCalendar=*-*-* *:00:00
+
+[Install]
+WantedBy=timers.target
